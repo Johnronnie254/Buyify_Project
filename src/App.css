@@ -43,3 +43,10 @@
   box-sizing: border-box;
   background-color: blue;
 }
+.input {
+  width: 80%;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+}
