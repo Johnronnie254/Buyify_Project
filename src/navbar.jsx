@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Aboutus from "./Aboutus";
 import Contactus from "./contactus";
-import "./App.css";
 
 function NavBar() {
   return (

@@ -5,7 +5,6 @@ function AboutUs() {
     <div className="container mt-4">
       <div className="row">
         <div className="col-md-8">
-          <h2>About Us</h2>
           <p>
             Welcome to Buyify, your go-to online marketplace for all your needs.
             Our mission is to provide a seamless and enjoyable shopping
