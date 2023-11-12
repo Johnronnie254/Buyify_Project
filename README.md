@@ -5,8 +5,6 @@ Ultimate shopping website
 
 ## Overview
 
-## Overview
-
 Buyify is an e-commerce platform that allows users to browse and purchase a variety of products from different categories.
 
 
