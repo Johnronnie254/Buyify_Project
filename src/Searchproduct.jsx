@@ -24,12 +24,20 @@ function Searchproduct() {
 
   return (
     <>
-      <input
-        className="input"
-        type="text"
-        placeholder="enter your product"
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <form action="" class="">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="enter your product"
+          />
+          <button type="submit" class="input-group-text btn-success">
+            <i class="bi bi-search me-2"></i> Search
+          </button>
+        </div>
+      </form>
+
       <div className="row">
         {products
           .filter((product) => {
