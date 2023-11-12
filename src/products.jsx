@@ -27,7 +27,6 @@ function Products(product) {
         <h1>Product name: {product.title} </h1>
         <p>Description: {product.description}</p>
         <span>Price: {product.price}</span>
-        <h3>Discount Percent: {product.discountPercentage}</h3>
         <h3>Rating: {product.rating}</h3>
         <h3>Stock: {product.stock}</h3>
         <h3>Brand: {product.brand}</h3>
