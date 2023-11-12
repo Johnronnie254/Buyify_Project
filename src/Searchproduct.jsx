@@ -5,6 +5,7 @@ function Searchproduct() {
   const [products, setProducts] = useState([]);
   const [visible, setVisible] = useState(4);
   const [search, setSearch] = useState("");
+
   const LoadMoreData = () => {
     setVisible((prevVisible) => prevVisible + 4);
   };
@@ -16,8 +17,11 @@ function Searchproduct() {
   useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((res) => res.json())
-      .then((data) => setProducts(data.products));
+      .then((data) => {
+        setProducts(data.products);
+      });
   }, []);
+
   return (
     <>
       <input
@@ -26,7 +30,7 @@ function Searchproduct() {
         placeholder="enter your product"
         onChange={(e) => setSearch(e.target.value)}
       />
-      <div>
+      <div className="row">
         {products
           .filter((product) => {
             return product.title.toLowerCase() === ""
@@ -35,12 +39,23 @@ function Searchproduct() {
           })
           .slice(0, visible)
           .map((product) => (
-            <Products key={product.id} {...product} />
+            <div key={product.id} className="col-md-3">
+              <Products {...product} />
+            </div>
           ))}
       </div>
-      <button onClick={LoadMoreData}>Load More</button>
-      <button onClick={LoadLessData}>Load Less</button>
+      <div className="d-flex justify-content-center mt-3">
+        <button className="btn btn-primary mx-2" onClick={LoadMoreData}>
+          Load More
+        </button>
+        {visible > 4 && (
+          <button className="btn btn-secondary" onClick={LoadLessData}>
+            Load Less
+          </button>
+        )}
+      </div>
     </>
   );
 }
+
 export default Searchproduct;
