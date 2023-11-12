@@ -1,11 +1,7 @@
 # Buyify
 
 Ultimate shopping website
-## Overview
 
-# Buyify
-
-![Buyify Logo](path-to-your-logo.png)
 
 ## Overview
 
